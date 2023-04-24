@@ -54,7 +54,7 @@ function submit() {
     for (let j = 0; j < rmList.length; j++) work = work.replace(rmList[j], " ");
     work = work.toLowerCase();
     document.getElementById("acc").innerHTML = "<b>Accuracy: " + (similarity(work, answer) * 100).toFixed(2).toString() + "%</b>";
-    let output = htmldiff(answer, work);
+    let output = htmldiff(work, answer);
     document.getElementById("output").innerHTML = output;
     // show transcript
     for (let i = 0; i < script.length; i++) {
