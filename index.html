@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
+  <script src="./htmldiff.js"></script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <input type="text" id="videoID" placeholder="youtube video id"> -->
+    <div style="width:77%;height:950px;float:left;">
+        Video file: <input type="file" accept="video/*" id="vidFile" />
+        Subtitles file: <input type="file" id="subFile">
+        <button onclick="loadSes()">Load</button>
+        <button onclick="submit()">Submit</button>
+        <br><br>
+        <!-- <iframe width="640" height="480" id="relax" src="https://www.youtube.com/embed/"></iframe> -->
+        <video id="relax" autoplay></video>
+        <textarea rows="31" cols="60" id="work"></textarea><br>
+        <button onclick="back()" id="back" disabled><</button>
+        <button onclick="next()" id="next" disabled>></button>
+        <br>
+        <p id="acc"></p>
+        <p id="output"></p>
+    </div>
+    <div style="width:22%;height:750px;float:left;border:1px solid black;overflow-y:auto" id="sub">
+    </div>
+</body>
+</html>
