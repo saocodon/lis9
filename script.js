@@ -47,6 +47,7 @@ function submit() {
     clearInterval(tickId);
     document.getElementById("back").style.visibility = 'hidden';
     document.getElementById("next").style.visibility = 'hidden';
+    document.getElementById("subcount").style.visibility = 'hidden';
     document.getElementById("relax").setAttribute("controls","controls")
     var work = document.getElementById("work").value;
     work = work.replace(/[.,\/#!$%\^&\*;\":{}=\-_`~()]/g, "");
@@ -70,8 +71,8 @@ function submit() {
     }
 }
 
-function back() { i = i - 1; }
-function next() { i = i + 1; }
+function back() { i = i - 1; document.getElementById("subcount").innerHTML = (i + 1).toString() + '/' + script.length; }
+function next() { i = i + 1; document.getElementById("subcount").innerHTML = (i + 1).toString() + '/' + script.length;}
 
 function tick() {
     if (document.getElementById("relax").currentTime >= end[i]) {
@@ -119,6 +120,7 @@ function loadSes() {
             answer = answer.replace(/\s{2,}/g," ");
             for (let j = 0; j < rmList.length; j++) answer = answer.replace(rmList[j], " ");
             answer = answer.toLowerCase();
+            document.getElementById("subcount").innerHTML = "1/" + script.length;
         }
     }
 }

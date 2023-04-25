@@ -8,22 +8,27 @@
   <script src="./script.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body style="overflow:hidden">
     <!-- <input type="text" id="videoID" placeholder="youtube video id"> -->
     <div style="width:77%;height:950px;float:left;">
-        Video file: <input type="file" accept="video/*" id="vidFile" />
-        Subtitles file: <input type="file" id="subFile">
-        <button onclick="loadSes()">Load</button>
-        <button onclick="submit()">Submit</button>
-        <br><br>
-        <!-- <iframe width="640" height="480" id="relax" src="https://www.youtube.com/embed/"></iframe> -->
-        <video id="relax" style="width:640px;height:480px;" autoplay></video>
-        <textarea rows="31" cols="60" id="work"></textarea><br>
-        <button onclick="back()" id="back" disabled><</button>
-        <button onclick="next()" id="next" disabled>></button>
-        <br>
-        <p id="acc"></p>
-        <p id="output"></p>
+        <div>
+            Video file: <input type="file" accept="video/*" id="vidFile" />
+            Subtitles file: <input type="file" id="subFile">
+            <button onclick="loadSes()">Load</button>
+            <button onclick="submit()">Submit</button>
+            <br><br>
+            <!-- <iframe width="640" height="480" id="relax" src="https://www.youtube.com/embed/"></iframe> -->
+            <video id="relax" style="width:640px;height:480px;" autoplay></video>
+            <textarea rows="31" cols="60" id="work"></textarea><br>
+            <button onclick="back()" id="back" disabled><</button>
+            <button onclick="next()" id="next" disabled>></button>
+            <span id="subcount"></span>
+            <br>
+            <p id="acc"></p>
+        </div>
+        <div style="width:99%;height:150px;border:1px solid black;overflow-y:auto">
+            <p id="output"></p>
+        </div>
     </div>
     <div style="width:22%;height:750px;float:left;border:1px solid black;overflow-y:auto" id="sub">
     </div>
